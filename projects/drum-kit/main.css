@@ -1,0 +1,94 @@
+.appContainer {
+  user-select: none;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  font-size: 5vh;
+}
+
+.panel {
+  width: 43vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px black solid;
+}
+
+.kit {
+  height: 45vh;
+}
+
+.buttons button {
+  width: 1.5vw;
+  position: fixed;
+  font-size: 2vh;
+  color: white;
+  background-color: black;
+}
+
+#hihat { left: 32vw;  bottom: 46vh; }
+#crash { left: 32vw;  bottom: 60vh; }
+#ride { left: 45vw;  bottom: 62vh; }
+#snare { left: 36.5vw;  bottom: 47vh; }
+#kick { left: 40vw;  bottom: 37vh; }
+#tom1 { left: 36vw;  bottom: 58.5vh; }
+#tom2 { left: 40.5vw;  bottom: 61vh; }
+#tom3 { left: 44vw;  bottom: 50vh; }
+
+.rightPart {
+  height: 95%; width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 1vh;
+  color: white;
+  font-size: 3.5vh;
+  border-radius: 15px;
+}
+
+.separator {
+  height: 1px; width: 100%;
+  margin-top: 1vh;
+  background-color: grey;
+}
+
+.binds {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:start;
+  margin-top: 1vh;
+}
+
+.row button {
+  width: 2.5vw;
+}
+
+.row button:first-child {
+  margin-right: 2vh;
+}
+
+#reset {
+  width: 100%;
+}
+
+#infos {
+  position: fixed;
+  bottom: 15vh;
+  font-size: 3vh;
+  color: rgb(214, 214, 214);
+}

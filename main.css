@@ -1,0 +1,38 @@
+.appContainer {
+  user-select: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  color: white;
+}
+
+.title {
+  font-size: 12vh;
+  margin-bottom: 12vh;
+}
+
+#links {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#links h1 {
+  border: 2px grey solid;
+  padding: 1vh;
+}
+
+#links h1:hover {
+  border-radius: 5px;
+  border-color: white;
+}
+
+#links h1:active {
+  transform: scale(0.9);
+  border-color: darkgray;
+  border-radius: 5px;
+  color: darkgray;
+}

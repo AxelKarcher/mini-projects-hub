@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel='stylesheet' href='style.css'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <Title>drum-kit</Title>
+</head>
+<body>
+  <link rel='stylesheet' href='main.css'>
+
+  <div class='appContainer'>
+    <div class='panel'>
+      <div class='leftPart'>
+        <img class='kit' src='assets/drumkit.png' />
+        <div class='buttons'>
+          <button id='hihat'>A</button>
+          <button id='crash'>Z</button>
+          <button id='ride'>E</button>
+          <button id='snare'>R</button>
+          <button id='kick'>T</button>
+          <button id='tom1'>Y</button>
+          <button id='tom2'>U</button>
+          <button id='tom3'>I</button>
+        </div>
+      </div>
+      <div class='rightPart'>
+        <div class='title'>Mapping</div>
+        <div class='separator'></div>
+        <div class='binds'>
+          <div class='row'>
+            <button id='hihatBind'>A</button>
+            <div>Hi-hat</div>
+          </div>
+          <div class='row'>
+            <button id='crashBind'>Z</button>
+            <div>Crash</div>
+          </div>
+          <div class='row'>
+            <button id='rideBind'>E</button>
+            <div>Ride</div>
+          </div>
+          <div class='row'>
+            <button id='snareBind'>R</button>
+            <div>Snare</div>
+          </div>
+          <div class='row'>
+            <button id='kickBind'>T</button>
+            <div>Kick</div>
+          </div>
+          <div class='row'>
+            <button id='tom1Bind'>Y</button>
+            <div>Tom alto</div>
+          </div>
+          <div class='row'>
+            <button id='tom2Bind'>U</button>
+            <div>Tom medium</div>
+          </div>
+          <div class='row'>
+            <button id='tom3Bind'>I</button>
+            <div>Tom bass</div>
+          </div>
+          <div class='row'>
+            <button id='reset'>Default bindings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='infos'></div>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+</html>

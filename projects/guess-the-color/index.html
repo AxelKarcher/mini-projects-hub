@@ -1,0 +1,42 @@
+<head>
+  <link rel='stylesheet' href='style.css'>
+  <meta http-equiv='Content-Type' name='viewport' content='charset=utf-8; width=device-width; initial-scale=1'>
+  <Title>guess-the-color</Title>
+</head>
+<body>
+  <link rel='stylesheet' href='main.css'>
+
+  <div class='appContainer'>
+    <div class='panel'>
+      <div class='header'>
+        <div class='topPart'>
+          <div id='colorToGuess'></div>
+          <select id='diffSelect'>
+            <option value='easy'>Easy</option>
+            <option value='hard' selected>Hard</option>
+          </select>
+        </div>
+        <div class='separator'></div>
+      </div>
+      <div class='cards'>
+        <div id='easy'>
+          <div id='card1' class='card'></div>
+          <div id='card2' class='card'></div>
+          <div id='card3' class='card'></div>
+        </div>
+        <div id='hard'>
+          <div id='card4' class='card'></div>
+          <div id='card5' class='card'></div>
+          <div id='card6' class='card'></div>
+        </div>
+      </div>
+    </div>
+    <div class='bottom'>
+      <div id='infos'></div>
+      <button id='restart'>Play again</button>
+    </div>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+</html>

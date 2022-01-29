@@ -1,0 +1,70 @@
+.appContainer {
+  user-select: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  font-size: 5vh;
+}
+
+.appContainer button {
+  width: 4.5vw;
+}
+
+.panel {
+  height: 50vh; width: 20vw;
+  padding: 1.5vh;
+  background-color: white;
+  border-radius: 15px;
+  border: 0.5vh black solid;
+}
+
+.panel div:nth-child(-n+2) {
+  margin-bottom: 2vh;
+}
+
+.header {
+  height: 5vh;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1vh;
+  border: 1px black solid;
+  text-align: right;
+}
+
+#result {
+  margin-right: 1.5vh;
+}
+
+#operators {
+  display: flex;
+  justify-content: space-between;
+}
+
+#operators button {
+  background-color: rgb(216, 216, 216);
+}
+
+.bottomPart {
+  display: flex
+}
+
+#digits button:nth-child(1),
+#digits button:nth-child(4),
+#digits button:nth-child(9) {
+  margin-bottom: 2vh;
+}
+
+#validate button {
+  height: 100%;
+  background-color: lightblue;
+}
+
+#infos {
+  position: fixed;
+  bottom: 19vh;
+  color: rgba(255, 255, 255, 0.747);
+  font-size: 2vh;
+}
