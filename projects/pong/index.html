@@ -3,15 +3,20 @@
 <head>
   <link rel='stylesheet' href='style.css'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>tic-tac-toe</title>
+  <title>pong</title>
 </head>
 <body>
   <link rel='stylesheet' href='main.css'>
 
   <div class='appContainer'>
-    <div id='playGrid' disabled></div>
-    <div id='infoText'></div>
-    <button id='restartBtn' onclick='newGame()'>Restart</button>
+    <div class='panel'>
+      <div id='round'></div>
+      <div id='scores'>
+        <div id='leftScore'></div>
+        <div id='rightScore'></div>
+      </div>
+      <canvas id='canvas' height='580' width='1150'></canvas>
+    </div>
   </div>
 
   <script src='main.js'></script>

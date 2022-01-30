@@ -1,5 +1,7 @@
 'use strict'
 
+// afficher les millisecondes
+
 const div = document.getElementsByTagName('time')[0]
 const startBtn = document.getElementById('startBtn')
 const stopBtn = document.getElementById('stopBtn')
