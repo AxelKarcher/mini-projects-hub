@@ -1,6 +1,6 @@
 'use strict'
 
-// afficher ligne gagnante
+// mode 2 joueurs
 
 let playGridDiv = document.getElementById('playGrid')
 let infoTextDiv = document.getElementById('infoText')
@@ -10,8 +10,18 @@ let isUserTurn
 let isFirstTurn = true
 let isWaitingForUser = false
 let tookCases = []
+let probs = [
+  [0, 1, 2], [3, 4, 5],
+  [6, 7, 8], [0, 3, 6],
+  [1, 4, 7], [2, 5, 8],
+  [0, 4, 8], [2, 4, 6]
+]
 
 const newGame = () => {
+  [...playGridDiv.children].forEach((card) => {
+    card.style.backgroundColor = 'lightblue'
+  })
+
   restartBtnDiv.style.visibility = 'hidden'
   playGridDiv.childNodes.forEach(elem => {
     elem.innerHTML = ''
@@ -31,11 +41,14 @@ const newTurn = () => {
   }
 }
 
-const gameEnd = (type) => {
+const gameEnd = (type, case1, case2, case3) => {
   restartBtnDiv.style.visibility = 'visible'
   if (type === 'draw') {
     setText('Draw match !')
   } else {
+    playGridDiv.children[case1].style.backgroundColor = 'salmon'
+    playGridDiv.children[case2].style.backgroundColor = 'salmon'
+    playGridDiv.children[case3].style.backgroundColor = 'salmon'
     setText(isUserTurn ? 'You won !' : 'The IA won !')
   }
 }
@@ -45,39 +58,11 @@ const atPos = (index) => { return playGridDiv.children[index].innerHTML }
 const setText = (text) => { infoTextDiv.innerHTML = text }
 
 const checkGrid = () => {
-  let case1 = 0
-  let case2 = 0
-  let case3 = 0
-
   if (tookCases.length >= 5) {
     for (let i = 0; i != 8; i++) {
-      switch(i) {
-        case 0:
-          case1 = 0; case2 = 1; case3 = 2
-          break;
-        case 1:
-          case1 = 3; case2 = 4; case3 = 5
-          break;
-        case 2:
-          case1 = 6; case2 = 7; case3 = 8
-          break;
-        case 3:
-          case1 = 0; case2 = 3; case3 = 6
-          break;
-        case 4:
-          case1 = 1; case2 = 4; case3 = 7
-          break;
-        case 5:
-          case1 = 2; case2 = 5; case3 = 8
-          break;
-        case 6:
-          case1 = 0; case2 = 4; case3 = 8
-          break;
-        case 7:
-          case1 = 2; case2 = 4; case3 = 6
-      }
-      if ((atPos(case1) !== '') && (atPos(case1)) === atPos(case2) && (atPos(case2)) === atPos(case3)) {
-        return gameEnd()
+      if ((atPos(probs[i][0]) !== '') && (atPos(probs[i][0])) === atPos(probs[i][1])
+      && (atPos(probs[i][1])) === atPos(probs[i][2])) {
+        return gameEnd('', probs[i][0], probs[i][1], probs[i][2])
       }
     }
     if (tookCases.length === 9) {

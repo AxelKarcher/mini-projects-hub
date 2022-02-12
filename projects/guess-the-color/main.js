@@ -27,51 +27,53 @@ let winPos = 0
 let lives = 2
 let isGameFinished = false
 
-function win () {
+const win = () => {
   isGameFinished = true
   infosDiv.innerHTML = 'You won !'
   restartDiv.style.display = ''
 }
 
-function lose () {
+const lose = () => {
   isGameFinished = true
   infosDiv.innerHTML = 'You lose... The winning card was the n°' + winPos + ' !'
   restartDiv.style.display = ''
 }
 
-function attempt (nb) {
-  if (isGameFinished === true)
+const attempt = (nb) => {
+  if (isGameFinished === true) {
     return
+  }
 
-  if (winPos === nb)
+  if (winPos === nb) {
     win()
-  else {
+  } else {
     lives = lives - 1
     infosDiv.innerHTML = 'Lives left: ' + lives
-    if (lives === -1)
+    if (lives === -1) {
       lose()
+    }
   }
 }
 
-function genHex () { return Math.floor(Math.random() * 256) }
+const genHex = () => { return Math.floor(Math.random() * 256) }
 
-function getNewWinPos () { winPos = Math.floor(Math.random() * (diff === 'easy' ? 3 : 6) + 1) }
+const getNewWinPos = () => { winPos = Math.floor(Math.random() * (diff === 'easy' ? 3 : 6) + 1) }
 
-function applyPosition () {
+const applyPosition = () => {
   winR = genHex()
   winG = genHex()
   winB = genHex()
 
   colorToGuessDiv.innerHTML = 'RGB(' + winR + ', ' + winG + ', ' + winB + ')'
   winPos === 1 && (card1Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
-  winPos === 2 && (card1Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
-  winPos === 3 && (card1Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
-  winPos === 4 && (card1Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
-  winPos === 5 && (card1Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
-  winPos === 6 && (card1Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
+  winPos === 2 && (card2Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
+  winPos === 3 && (card3Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
+  winPos === 4 && (card4Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
+  winPos === 5 && (card5Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
+  winPos === 6 && (card6Div.style.backgroundColor = 'rgb(' + winR + ',' + winG + ',' + winB + ')')
 }
 
-function genColors () {
+const genColors = () => {
   card1Div.style.backgroundColor = 'rgb(' + genHex() + ',' + genHex() + ',' + genHex() + ')'
   card2Div.style.backgroundColor = 'rgb(' + genHex() + ',' + genHex() + ',' + genHex() + ')'
   card3Div.style.backgroundColor = 'rgb(' + genHex() + ',' + genHex() + ',' + genHex() + ')'
@@ -83,7 +85,7 @@ function genColors () {
   applyPosition()
 }
 
-function changediff (e) {
+const changediff = (e) => {
   restart()
   diff = e.target.value
 
@@ -94,7 +96,7 @@ function changediff (e) {
   genColors()
 }
 
-function restart () {
+const restart = () => {
   isGameFinished = false
   genColors()
   lives = (diff === 'easy' ? 1 : 2)
@@ -103,5 +105,3 @@ function restart () {
 }
 
 restart()
-
-// mettre en avant la carte finale

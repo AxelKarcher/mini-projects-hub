@@ -1,5 +1,4 @@
 .appContainer {
-  user-select: none;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -60,9 +59,9 @@
   border: 2px black solid;
 }
 
-.card:hover {
-  border-color: white;
-}
+.card:hover { transform: scale(0.98); }
+
+.card:active { border-color: white; }
 
 #easy {
   margin-bottom: 2vh;

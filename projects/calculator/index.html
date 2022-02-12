@@ -7,12 +7,12 @@
   <Title>calculator</Title>
 </head>
 <body>
-  <link rel='stylesheet' href='app.css'>
+  <link rel='stylesheet' href='main.css'>
 
   <div class='appContainer'>
     <div class='panel'>
       <div class='header'>
-        <i id='delete' class='fas fa-backspace'></i>
+        <i id='delete' onclick='remove()' class='fas fa-backspace'></i>
         <div id='result'></div>
       </div>
       <div id='operators'>
@@ -34,10 +34,10 @@
           <button id='3'>3</button>
           <button id='0'>0</button>
           <button id='.'>.</button>
-          <button id='C'>C</button>
+          <button id='C' onclick='resetEntry()'>C</button>
         </div>
         <div id='validate'>
-          <button id='='><i class='fas fa-equals'></i></button>
+          <button id='=' onclick='enter()'><i class='fas fa-equals'></i></button>
         </div>
       </div>
     </div>

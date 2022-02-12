@@ -1,0 +1,71 @@
+[
+  {
+    "title": "stopwatch",
+    "redirectPath": "stopwatch",
+    "status": "orange",
+    "info": "Would be more relevant with milliseconds"
+  },
+
+  {
+    "title": "clock",
+    "redirectPath": "clock",
+    "status": "green",
+    "info": "The simpliest thing ever"
+  },
+
+  {
+    "title":"calculator",
+    "redirectPath": "calculator",
+    "status": "green",
+    "info": "Works well"
+  },
+
+  {
+    "title": "drum-kit",
+    "redirectPath": "drum-kit",
+    "status": "green",
+    "info": "I dubbed the sounds myself. Works well but the cooldown thing is annoying"
+  },
+
+  {
+    "title": "guess-the-color",
+    "redirectPath": "guess-the-color",
+    "status": "green",
+    "info": "So fun to do, very hard to win"
+  },
+
+  {
+    "title": "hangman",
+    "redirectPath": "hangman",
+    "status": "green",
+    "info": "Thanks to Simon Bredeche for the word giver API"
+  },
+
+  {
+    "title": "tic-tac-toe",
+    "redirectPath": "tic-tac-toe",
+    "status": "green",
+    "info": "The IA is random. I could add a 2-players mode"
+  },
+
+  {
+    "title": "pong",
+    "redirectPath": "pong",
+    "status": "red",
+    "info": "All I need is to get the ball moving (everything)"
+  },
+
+  {
+    "title":"palindrome-checker",
+    "redirectPath": "palindrome-checker",
+    "status": "green",
+    "info": "Cute little function"
+  },
+
+  {
+    "title": "super-simon",
+    "redirectPath": "super-simon",
+    "status": "green",
+    "info": "Fun to do. There's a very rare bug but it's ok"
+  }
+]

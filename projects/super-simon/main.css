@@ -1,0 +1,41 @@
+.appContainer {
+  user-select: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  font-size: 4vh;
+}
+
+#topText {
+  color: lightgray
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  height: 25vh; width: 25vh;
+  border: 2px black solid;
+  border-radius: 15px;
+  margin: 0.3vh;
+}
+
+.card:hover { transform: scale(0.98); }
+
+.card:active { border-color: white; }
+
+#redCard { background-color: rgb(255, 0, 0); }
+#greenCard { background-color: rgb(0, 255, 0); }
+#blueCard { background-color: rgb(0, 0, 255); }
+#yellowCard { background-color: rgb(255, 255, 0); }
+
+#bottomBtn:active { transform: scale(0.95); }
+
+#bottomText {
+  color: lightgray;
+}

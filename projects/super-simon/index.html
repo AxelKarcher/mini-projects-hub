@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel='stylesheet' href='style.css'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Title</title>
+
+  <audio id='errorSound'>
+    <source src='./assets/error.wav'></source>
+  </audio>
+  <audio id='clickSound'>
+    <source src='./assets/cardClick.wav'></source>
+  </audio>
+</head>
+<body>
+  <link rel='stylesheet' href='main.css'>
+
+  <div class='appContainer'>
+    <div id='topText'></div>
+    <br />
+    <div class='cards'>
+      <div id='redCard' class='card' onclick='cardClick("red")'></div>
+      <div id='greenCard' class='card' onclick='cardClick("green")'></div>
+      <div id='blueCard' class='card' onclick='cardClick("blue")'></div>
+      <div id='yellowCard' class='card' onclick='cardClick("yellow")'></div>
+    </div>
+    <br />
+    <button id='bottomBtn'>New game</button>
+    <br />
+    <div id='bottomText'></div>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+</html>
