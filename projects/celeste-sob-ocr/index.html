@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel='stylesheet' href='style.css'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Title</title>
+</head>
+<body>
+  <link rel='stylesheet' href='main.css'>
+
+  <div class='appContainer'>
+    <div id='leftPart'>
+      <div class='panel'>
+        <input
+          style='visibility:hidden;'
+          id='fileInput'
+          accept='image/*'
+          type='file'
+          onchange='handleImage(this)'
+        />
+        <label id='labelBtn' for='fileInput'>Upload an image</label>
+        <div class='separator'></div>
+        <br />
+        <div id='imageDiv'>
+          <img id='image' src='' />
+        </div>
+        <br />
+      </div>
+    </div>
+    <div id='rightPart'>
+      <div class='panel'>
+        <label for='prologueInput'>
+          <input
+            id='prologueBox'
+            class='inputBox'
+            type='checkbox'
+            onclick='togglePrologue()'
+          >
+          Count Prologue
+        </label>
+        <input id='prologueInput' onchange='handlePrologueEntry(this)' placeholder='XX.XXX'/>
+        <form id='boxes'>
+          <input onchange='handleRadios(1)' class='inputBox' type='radio' checked>Only A-Sides<br>
+          <input onchange='handleRadios(2)' class='inputBox' type='radio'>5B or 6B<br>
+          <input onchange='handleRadios(3)' class='inputBox' type='radio'>5B and 6B<br>
+        </form>
+      </div>
+      <br />
+      <div id='infoText' class='text'></div>
+      <div id='sobText' class='text'></div>
+    </div>
+  </div>
+
+  <script src='main.js'></script>
+</body>
+</html>

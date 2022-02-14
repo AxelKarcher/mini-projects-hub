@@ -19,7 +19,7 @@ const initInfos = (data) => {
       infoPanelDiv.innerHTML = elem.info
     }
     newLink.innerHTML = elem.title
-    newLink.onclick = () => redirectTo(elem.redirectPath + '/index.html')
+    newLink.onclick = () => redirectTo(elem.title + '/index.html')
     linksDiv.appendChild(newLink)
   })
 }
